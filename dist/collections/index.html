@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1c19">
+  <meta name="description" content="Shop complete men’s outfits, from everyday staples to Indian occasionwear.">
+  <title>Collections | Try the Look India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="storefront.css">
+  <script defer src="shop.js"></script>
+  <script defer src="storefront.js"></script>
+
+</head>
+<body data-page="directory" data-group="-1">
+  <a class="announcement" href="/offers/">Full outfits from ₹1,599 <span aria-hidden="true">·</span> Shop offers</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Try the Look India home">try<span>the</span>look<span class="brand-dot">.</span><small>INDIA</small></a>
+    <nav aria-label="Main navigation"><a href="/">Home</a><a href="/collections/" aria-current="page">Collections</a><a href="/new/">New Arrivals</a><a href="/runway/">3D Runway</a><a href="/lookbook/">Lookbook</a><a href="/offers/">Offers</a></nav>
+    <div class="header-actions">
+      <button class="bag-button" id="open-search" type="button" aria-label="Search"><span class="search-icon" aria-hidden="true"></span><span class="search-label">Search</span></button>
+      <button class="bag-button" id="open-bag" type="button"><span class="bag-icon" aria-hidden="true"></span><span>Bag</span><span class="count" id="bag-count">0</span></button>
+    </div>
+  </header>
+  <nav class="collection-nav" aria-label="Menswear categories"><a href="/collections/everyday-casual/">Everyday Casual</a><a href="/collections/streetwear/">Streetwear</a><a href="/collections/office-formal/">Office &amp; Formal</a><a href="/collections/festive-wedding/">Festive &amp; Wedding</a><a href="/collections/south-indian-traditional/">South Indian Traditional</a><a href="/collections/activewear/">Activewear</a><a href="/collections/winter-rain/">Winter &amp; Rain</a><a href="/collections/lounge-essentials/">Lounge &amp; Essentials</a><a href="/collections/shoes-accessories/">Shoes &amp; Accessories</a></nav>
+  <main id="main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span>Collections</div>
+      <div class="page-intro-copy"><h1 id="page-title">Collections</h1><p>Find menswear by occasion, then filter by colour, size and price.</p></div>
+
+    </section>
+
+    <section class="directory" aria-label="All collections"><a class="editorial-tile" href="/collections/everyday-casual/"><img src="assets/collection-0.webp" alt="" loading="lazy"><div><h3>Everyday Casual</h3><p>Easy tees, polos, relaxed denim and chinos for your everyday rotation.</p></div></a><a class="editorial-tile" href="/collections/streetwear/"><img src="assets/collection-1.webp" alt="" loading="lazy"><div><h3>Streetwear</h3><p>Oversized layers, utility trousers and clean sneakers for the city.</p></div></a><a class="editorial-tile" href="/collections/office-formal/"><img src="assets/collection-2.webp" alt="" loading="lazy"><div><h3>Office &amp; Formal</h3><p>Tailored separates, sharp shirts and smart shoes for work and after hours.</p></div></a><a class="editorial-tile" href="/collections/festive-wedding/"><img src="assets/collection-3.webp" alt="" loading="lazy"><div><h3>Festive &amp; Wedding</h3><p>Embroidered kurtas, sherwanis and Nehru jackets for the celebrations ahead.</p></div></a><a class="editorial-tile" href="/collections/south-indian-traditional/"><img src="assets/collection-4.webp" alt="" loading="lazy"><div><h3>South Indian Traditional</h3><p>Gold-border veshtis, crisp cotton shirts and traditional sandals.</p></div></a><a class="editorial-tile" href="/collections/activewear/"><img src="assets/collection-5.webp" alt="" loading="lazy"><div><h3>Activewear</h3><p>Breathable training tops, lightweight shorts and gear for days on the move.</p></div></a><a class="editorial-tile" href="/collections/winter-rain/"><img src="assets/collection-6.webp" alt="" loading="lazy"><div><h3>Winter &amp; Rain</h3><p>Soft knits, lightweight jackets and layers for changing weather.</p></div></a><a class="editorial-tile" href="/collections/lounge-essentials/"><img src="assets/collection-7.webp" alt="" loading="lazy"><div><h3>Lounge &amp; Essentials</h3><p>Cotton pyjamas, easy joggers and comfortable pieces for time at home.</p></div></a><a class="editorial-tile" href="/collections/shoes-accessories/"><img src="assets/collection-8.webp" alt="" loading="lazy"><div><h3>Shoes &amp; Accessories</h3><p>Sneakers, loafers, belts, bags and the small details that finish an outfit.</p></div></a></section>
+    <section id="lookbook" aria-label="Styled outfits"><div class="lookbook-grid"></div></section>
+    <runway-section aria-label="Interactive outfit runway">
+      <div class="stage" id="stage" tabindex="0" aria-label="Runway. Use left and right arrow keys to browse outfits.">
+        <div class="stage-label"><span class="dot"></span> <span id="stage-category"></span></div>
+        <div class="stage-number" id="look-number"></div>
+        <div class="display-choice"><button type="button" id="display-mode" aria-pressed="false" hidden>3D mannequins</button><span id="display-label" hidden>Styled photography</span></div>
+        <div class="orbit" id="orbit"></div>
+        <div class="webgl-view" id="webgl-view"></div>
+        <div class="view-tools" id="view-tools" hidden>
+          <div class="camera-controls">
+            <button type="button" data-camera="left" aria-label="Rotate camera left">‹</button>
+            <button type="button" data-camera="right" aria-label="Rotate camera right">›</button>
+            <button type="button" data-camera="in" aria-label="Zoom in">+</button>
+            <button type="button" data-camera="out" aria-label="Zoom out">−</button>
+            <button type="button" data-camera="reset">Reset view</button>
+          </div>
+          <p>Drag to orbit · Scroll to zoom</p>
+        </div>
+        <div class="stage-controls">
+          <button type="button" class="circle" id="prev" aria-label="Previous outfit">‹</button>
+          <div class="pagination" id="pagination"></div>
+          <button type="button" class="circle" id="next" aria-label="Next outfit">›</button>
+        </div>
+        <button class="play" id="play" type="button" aria-label="Play outfit slideshow" title="Play outfit slideshow">▶</button>
+      </div>
+      <aside class="look-panel" aria-label="Outfit details">
+        <p class="eyebrow">SHOP THE OUTFIT</p>
+        <h2 id="look-title"></h2>
+        <p id="look-description"></p>
+        <div id="look-products"></div>
+        <div class="look-total"><div><strong id="look-price"></strong><s id="look-original"></s></div><span class="offer-pill" id="look-saving"></span></div>
+        <button class="primary full-width" id="buy-look">Add full look</button>
+        <button class="text-button full-width" id="view-look">View full look</button>
+      </aside>
+    </runway-section>
+    <section class="collection" id="collection" aria-label="Catalog">
+      <div class="collection-head"><h2 id="catalog-title">All menswear</h2><p id="search-context"></p></div>
+      <form class="catalog-search" role="search"><label for="catalog-query">Search the collection</label><div><input id="catalog-query" name="q" type="search" placeholder="Try kurta, navy or sneakers" maxlength="90"><button class="primary" type="submit">Search</button></div></form>
+      <div class="category-list" id="categories" aria-label="Filter by occasion"></div>
+      <div class="filters" id="offers">
+        <label>Size <select id="size-filter"><option value="">All sizes</option></select></label>
+        <label>Colour <select id="colour-filter"><option value="">All colours</option></select></label>
+        <label>Sort <select id="sort-filter"><option value="">Featured</option><option value="low">Price low to high</option><option value="high">Price high to low</option><option value="latest">Newest first</option></select></label>
+        <label>Budget <select id="price-filter"><option value="">Any price</option><option value="499">Under ₹499</option><option value="999">Under ₹999</option><option value="1999">Full looks under ₹1,999</option></select></label>
+        <button class="text-button" id="reset-filters">Clear filters</button>
+        <span id="results-count" aria-live="polite"></span>
+      </div>
+      <div class="catalog" id="catalog"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><a class="wordmark" href="/">try<span>the</span>look<span class="brand-dot">.</span><small>INDIA</small></a><p>Menswear for every occasion.</p></div>
+      <div><h2>Shop</h2><a href="/collections/">All collections</a><a href="/new/">New arrivals</a><a href="/offers/">Offers</a></div>
+      <div><h2>Explore</h2><a href="/runway/">3D runway</a><a href="/lookbook/">Lookbook</a><button type="button" id="footer-bag" class="footer-button">Styling bag</button></div>
+      <div><h2>Popular collections</h2><a href="/collections/everyday-casual/">Everyday casual</a><a href="/collections/streetwear/">Streetwear</a><a href="/collections/festive-wedding/">Festive &amp; wedding</a></div>
+    </div>
+    <div class="footer-bottom">Try the Look India · Demo catalog and offers in INR</div>
+  </footer>
+  <dialog id="product-dialog" aria-labelledby="product-title"><div class="dialog-content" id="product-content"></div></dialog>
+  <dialog id="bundle-dialog" aria-labelledby="bundle-title"><div class="dialog-content" id="bundle-content"></div></dialog>
+  <dialog id="view-dialog" aria-labelledby="view-title"><div class="dialog-content" id="view-content"></div></dialog>
+  <dialog id="bag-dialog" aria-labelledby="bag-title"><div class="dialog-content" id="bag-content"></div></dialog>
+  <dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-content">
+    <div class="dialog-head"><h2 id="search-title">Search menswear</h2><button class="circle" type="button" data-close aria-label="Close">×</button></div>
+    <form class="catalog-search" action="/collections/" method="get" role="search"><label for="global-query">Garment, colour or occasion</label><div><input id="global-query" name="q" type="search" placeholder="Try Oxford shirt or olive" maxlength="90" required autofocus><button class="primary" type="submit">Search</button></div></form>
+  </div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
