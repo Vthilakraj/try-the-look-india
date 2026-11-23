@@ -2,6 +2,8 @@
 
 A menswear storefront with an interactive WebGL runway, 12 styled outfits, and 48 products across nine collections. Browse by colour, size, or price, then save individual pieces or full outfits to a styling bag.
 
+[View the live storefront](https://try-the-look-india.vercel.app/)
+
 ## Run locally
 
 From the repository root, run:
@@ -10,7 +12,7 @@ From the repository root, run:
 python3 -m http.server 8000 --directory dist
 ```
 
-Open http://localhost:8000. The runway is at http://localhost:8000/runway/ and uses WebGL.
+With the server running, enter `http://localhost:8000/` in your browser. The 3D Runway uses WebGL.
 
 ## Build the pages
 
